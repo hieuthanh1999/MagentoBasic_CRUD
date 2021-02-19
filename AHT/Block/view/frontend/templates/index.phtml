@@ -1,0 +1,35 @@
+<?php
+
+/** @var \AHT\Block\Block\Template $block */
+?>
+
+<div class="template">
+    <a href="<?php echo $block->getBaseUrl(); ?>block/index/insert" class="action primary">Create Block</a>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        <?php
+        $collection = $block->getAll();
+        foreach ($collection as $item) :
+        ?>
+            <tr>
+                <td><?php echo $item->getData('id'); ?></td>
+                <td><?php echo $item->getData('title'); ?></td>
+                <td><?php echo $item->getData('description'); ?></td>
+                <td>
+                    <a href="<?php echo $block->getBaseUrl(); ?>block/index/edit/id/<?php echo $item->getId(); ?>" class="action primary">Edit</a>
+                </td>
+                <td>
+                    <a href="<?php echo $block->getBaseUrl(); ?>block/index/delete/?id=<?php echo $item->getId(); ?>" class="action primary">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+
+</div>
