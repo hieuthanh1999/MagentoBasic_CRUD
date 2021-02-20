@@ -29,7 +29,7 @@ class Save extends \Magento\Framework\App\Action\Action
           if (isset($_POST['btn_edit'])) {
 
                $id   = $this->getRequest()->getParam('id');
-               $edit = $this->_blockFactory->create()->load($id);
+               $edit = $block->load($id);
 
                $edit->setTitle($_POST['title']);
                $edit->setDescription($_POST['description']);
