@@ -10,7 +10,7 @@ class CacheFont
         \Magento\Framework\App\Cache\TypeListInterface $cacheTypeList,
 		\Magento\Framework\App\Cache\Frontend\Pool $cacheFrontendPool
     ) {
-        $this->_cacheTypeList     = $cacheTypeList;
+                $this->_cacheTypeList     = $cacheTypeList;
 		$this->_cacheFrontendPool = $cacheFrontendPool;
     }
 
