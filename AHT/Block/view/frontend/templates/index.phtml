@@ -4,7 +4,17 @@
 ?>
 
 <div class="template">
-    <a href="<?php echo $block->getBaseUrl(); ?>block/index/insert" class="action primary">Create Block</a>
+    <style>
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+
+    <a style="margin-bottom: 10px;" href="<?php echo $block->getBaseUrl(); ?>block/index/insert" class="action primary">Create Block</a>
+
     <table>
         <tr>
             <th>Id</th>
