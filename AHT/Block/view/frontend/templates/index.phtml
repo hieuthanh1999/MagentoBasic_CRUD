@@ -14,7 +14,6 @@
     </style>
 
     <a style="margin-bottom: 10px;" href="<?php echo $block->getBaseUrl(); ?>block/index/insert" class="action primary">Create Block</a>
-
     <table>
         <tr>
             <th>Id</th>
@@ -23,7 +22,6 @@
             <th>Edit</th>
             <th>Delete</th>
         </tr>
-
         <?php
         $collection = $block->getAll();
         foreach ($collection as $item) :
